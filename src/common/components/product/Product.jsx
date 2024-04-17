@@ -1,10 +1,10 @@
+import formatToTengePrice from "@common/utils/formatToTengePrice";
 import fallbackImage from "@assets/images/placeholder.png";
 import styles from "./product.module.css";
 
 const Product = ({product: prod}) => {
 
-	// WARN: remove later
-	// console.log(prod);
+	const price = formatToTengePrice(prod.price);
 
 	const imageOnError = (e) => {
 		// NOTE: prevent infinite error loop
@@ -29,7 +29,7 @@ const Product = ({product: prod}) => {
 					</h3>
 
 					<p className={styles.product_price}>
-						{prod.price || "Цена неизвестна"}
+						{price || "Цена неизвестна"}
 					</p>
 				</div>
 
