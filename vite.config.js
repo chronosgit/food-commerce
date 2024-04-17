@@ -11,10 +11,10 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@assets": path.resolve(__dirname, "/src/assets"),
-      "@common": path.resolve(__dirname, "/src/assets"),
-      "@modules": path.resolve(__dirname, "/src/assets"),
-      "@routes": path.resolve(__dirname, "/src/routes"),
+      "@assets": path.resolve(__dirname, "./src/assets"),
+      "@common": path.resolve(__dirname, "./src/common"),
+      "@modules": path.resolve(__dirname, "./src/modules"),
+      "@routes": path.resolve(__dirname, "./src/routes"),
     }
   }
 });
