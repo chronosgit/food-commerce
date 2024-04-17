@@ -5,6 +5,7 @@
 			"@assets/*": ["/src/assets/*"],
 			"@common/*": ["/src/common/*"],
 			"@modules/*": ["/src/modules/*"],
+			"@routes/*": ["/src/routes/*"],
 		},
 	},
 	"exclude": ["node_modules"],
