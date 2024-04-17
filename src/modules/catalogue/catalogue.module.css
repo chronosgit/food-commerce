@@ -1,4 +1,6 @@
 .catalogue {
+	position: relative;
+
 	min-height: 100vh;
 	padding-block-start: 1.5rem;
 	padding-inline: 1.5rem;
@@ -10,4 +12,9 @@
 
 .logo_wrapper {
 	margin-block-end: 2rem;
+}
+
+.button_order_wrapper {
+	position: fixed;
+	bottom: 1.5rem;
 }
