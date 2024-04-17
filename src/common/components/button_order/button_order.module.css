@@ -1,0 +1,17 @@
+.button_order {
+	padding: 1rem 2rem;
+
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--color-white);
+	background-color: var(--color-green-dirty);
+	border: none;
+	border-radius: 1rem;
+
+	transition: all 0.1s ease;
+}
+
+.button_order:hover,
+.button_order:focus-visible {
+	background-color: var(--color-green-dirty-dark);
+}
