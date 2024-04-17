@@ -8,6 +8,7 @@ import styles from "./catalogue.module.css";
 const Catalogue = () => {
 
 	// TODO: add cart states
+	// TODO: add state logic into module hook
 	const [categories, setCategories] = useState(mockStaticCategories);
 
 	return (
