@@ -1,0 +1,37 @@
+.product {
+	padding-block: 1rem;
+	display: flex;
+	gap: 3rem;
+
+	border-bottom: 2px solid var(--color-gray);
+}
+
+.product_img {
+	width: 5rem;
+	max-width: 5rem;
+	max-height: 10rem;
+	object-fit: contain;
+}
+
+.product_heading {
+	margin-block-end: 1rem;
+	padding-block-start: 1rem;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+
+	font-size: 1.1rem;
+	font-weight: 500;
+}
+
+.product_name,
+.product_price {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+.product_type {
+	opacity: 0.8;
+}
