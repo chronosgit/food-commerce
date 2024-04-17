@@ -34,7 +34,12 @@ html {
 }
 
 :root {
-  
+  --color-cyan-light: #b6e9e1;
+  --color-cyan-dark: #5c998c;
+  --color-green-dirty: #80b213;
+  --color-gray: #e9e3e3;
+  --color-white: #ffffff;
+  --color-black: #000000;
 }
 
 body {
