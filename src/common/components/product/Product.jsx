@@ -27,7 +27,7 @@ const Product = ({product: prod}) => {
 		}
 
 		setPickedQuantity(prev => prev - 1);
-		removeFromCart(prod.id);
+		removeFromCart(prod.id, prod.price);
 	};
 
 	return (
