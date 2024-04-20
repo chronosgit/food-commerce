@@ -33,10 +33,18 @@ const useCart = () => {
 		setCardProducts(updatedCartProds);
 	};
 
+	const openCart = () => {
+		setCartOpen(true);
+	};
+
+	const closeCart = () => {
+		setCartOpen(false);
+	};
+
 	return {
 		cartProducts, totalPrice,
 		addToCart, removeFromCart,
-		isCartOpen,
+		openCart, closeCart,
 	};
 };
 
