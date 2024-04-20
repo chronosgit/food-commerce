@@ -11,12 +11,14 @@ const Catalogue = () => {
 
 	const {
 		totalPrice: totalCartProdsPrice,
-		cartProducts,
+		cartProducts, openCart: openCartWindow,
 	} = useContext(CartContext);
 	
 	const orderButtonText = makeOrderButtonText(
 		cartProducts.length, totalCartProdsPrice
 	);
+
+	const canOrder = Boolean(cartProducts.length);
 
 	return (
 		<div id="catalogue" className={styles.catalogue}>
@@ -25,7 +27,11 @@ const Catalogue = () => {
 			</div>
 
 			<div className={styles.button_order_wrapper}>
-				<ButtonOrder text={orderButtonText} />
+				<ButtonOrder 
+					text={orderButtonText} 
+					isDisabled={!canOrder} 
+					onClick={openCartWindow}
+				/>
 			</div>
 
 			<Categories categories={mockCategories} />
