@@ -1,11 +1,16 @@
-import doesExist from "@common/utils/doesExist";
+import doExist from "@common/utils/doExist";
 import styles from "./button_order.module.css";
 
-const ButtonOrder = ({text, onClick}) => {
+const ButtonOrder = ({text, isDisabled, onClick}) => {
 
-	if(!doesExist(text)) {
+	if(!doExist(text, isDisabled, onClick)) {
 		return;
 	}
+
+	const disabledStyles = {
+		backgroundColor: isDisabled ? "var(--color-gray-dark)" : "",
+		cursor: isDisabled ? "auto" : "pointer",
+	};
 
 	const onKeyDown = (e) => {
 		if(e.key === "Enter") {
@@ -16,6 +21,8 @@ const ButtonOrder = ({text, onClick}) => {
 	return (
 		<button 
 			className={styles.button_order}
+			style={disabledStyles}
+			disabled={isDisabled}
 			onClick={onClick}
 			onKeyDown={(e) => onKeyDown(e)}
 		>
