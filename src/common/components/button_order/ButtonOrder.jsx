@@ -1,8 +1,9 @@
+import doesExist from "@common/utils/doesExist";
 import styles from "./button_order.module.css";
 
 const ButtonOrder = ({text, onClick}) => {
 
-	if(!text) {
+	if(!doesExist(text)) {
 		return;
 	}
 
