@@ -34,14 +34,14 @@ const mockCategories = [
 		title: "Снеки",
 		products: [
 			{
-				id: 1,
+				id: 4,
 				name: "Snickers",
 				price: 550,
 				type: "Шоколадный батончик",
 				imageUrl: "/src/assets/images/products/snacks/snickers.png",
 			},
 			{
-				id: 2,
+				id: 5,
 				name: "Twix",
 				price: 550,
 				type: "Шоколадный батончик",
@@ -54,7 +54,7 @@ const mockCategories = [
 		title: "Сендвичи",
 		products: [
 			{
-				id: 1,
+				id: 6,
 				name: "Клаб-сендвич с курицей",
 				price: 950,
 				type: "Клаб-сендвич",
@@ -67,7 +67,7 @@ const mockCategories = [
 		title: "Комплексные обеды",
 		products: [
 			{
-				id: 1,
+				id: 7,
 				name: "Бокс-блюдо куриное",
 				price: 1350,
 				type: "Клаб-сендвич",
