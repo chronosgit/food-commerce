@@ -1,0 +1,41 @@
+.wrapper {
+	padding: 0.3rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+
+	background-color: var(--color-cyan-light);
+	border-radius: 0.5rem;
+}
+
+.controller {
+	--size: 1rem;
+	position: relative;
+	width: var(--size);
+	height: var(--size);
+	padding: 0.7rem;
+
+	background-color: var(--color-white);
+	border: none;
+	border-radius: 50%;
+	transition: all 0.1s ease;
+	cursor: pointer;
+}
+
+.controller_btn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 1.2rem;
+}
+
+.controller_btn:focus-visible {
+	outline: none;
+}
+
+.quantity {
+	color: var(--color-cyan-dark);
+}

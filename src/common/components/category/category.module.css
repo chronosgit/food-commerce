@@ -1,5 +1,9 @@
 .category {
-	
+	margin-block-start: 3rem;
+}
+
+.category:first-child {
+	margin-block-start: 0rem;
 }
 
 .category_title {

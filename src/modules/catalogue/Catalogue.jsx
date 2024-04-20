@@ -1,15 +1,24 @@
-import { useState } from "react";
+import { useContext } from "react";
 import Categories from "@common/components/categories/Categories";
 import Logo from "@common/components/logo/Logo";
 import ButtonOrder from "@common/components/button_order/ButtonOrder";
-import mockStaticCategories from "./api/mockCategories";
+import CartContext from "@common/contexts/CartContext";
+import makeOrderButtonText from "./utils/makeOrderButtonText";
+import mockCategories from "./api/mockCategories";
 import styles from "./catalogue.module.css";
 
 const Catalogue = () => {
 
-	// TODO: add cart states
-	// TODO: add state logic into module hook
-	const [categories, setCategories] = useState(mockStaticCategories);
+	const {
+		totalPrice: totalCartProdsPrice,
+		cartProducts, openCart: openCartWindow,
+	} = useContext(CartContext);
+	
+	const orderButtonText = makeOrderButtonText(
+		cartProducts.length, totalCartProdsPrice
+	);
+
+	const canOrder = Boolean(cartProducts.length);
 
 	return (
 		<div id="catalogue" className={styles.catalogue}>
@@ -18,10 +27,14 @@ const Catalogue = () => {
 			</div>
 
 			<div className={styles.button_order_wrapper}>
-				<ButtonOrder text="Временный текст" />
+				<ButtonOrder 
+					text={orderButtonText} 
+					isDisabled={!canOrder} 
+					onClick={openCartWindow}
+				/>
 			</div>
 
-			<Categories categories={categories} />
+			<Categories categories={mockCategories} />
 		</div>	
 	);
 };
