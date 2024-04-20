@@ -1,15 +1,14 @@
-import { useState } from "react";
 import Categories from "@common/components/categories/Categories";
 import Logo from "@common/components/logo/Logo";
 import ButtonOrder from "@common/components/button_order/ButtonOrder";
-import mockStaticCategories from "./api/mockCategories";
+import useCategories from "./hooks/useCategories";
 import styles from "./catalogue.module.css";
 
 const Catalogue = () => {
 
 	// TODO: add cart states
-	// TODO: add state logic into module hook
-	const [categories, setCategories] = useState(mockStaticCategories);
+
+	const {categories: cats} = useCategories();
 
 	return (
 		<div id="catalogue" className={styles.catalogue}>
@@ -21,7 +20,7 @@ const Catalogue = () => {
 				<ButtonOrder text="Временный текст" />
 			</div>
 
-			<Categories categories={categories} />
+			<Categories categories={cats} />
 		</div>	
 	);
 };

@@ -1,4 +1,5 @@
 import formatToTengePrice from "@common/utils/formatToTengePrice";
+import QuantitySelector from "@common/components/quantity_selector/QuantitySelector";
 import fallbackImage from "@assets/images/placeholder.png";
 import styles from "./product.module.css";
 
@@ -37,7 +38,9 @@ const Product = ({product: prod}) => {
 					{prod.desc || "Тип"}
 				</p>
 
-				{/* TODO: put order related button here */}
+				<div className={styles.quantity_selector_wrapper}>
+					<QuantitySelector />
+				</div>
 			</div>
 		</div>
 	);
