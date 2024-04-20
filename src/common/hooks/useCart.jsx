@@ -4,6 +4,7 @@ const useCart = () => {
 
 	const [cartProducts, setCardProducts] = useState([]);
 	const [totalPrice, setTotalPrice] = useState(0);
+	const [isCartOpen, setCartOpen] = useState(false);
 
 	const addToCart = (product) => {
 		setTotalPrice(prev => prev + product.price);
@@ -35,6 +36,7 @@ const useCart = () => {
 	return {
 		cartProducts, totalPrice,
 		addToCart, removeFromCart,
+		isCartOpen,
 	};
 };
 
