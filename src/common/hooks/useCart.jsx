@@ -44,7 +44,7 @@ const useCart = () => {
 	return {
 		cartProducts, totalPrice,
 		addToCart, removeFromCart,
-		openCart, closeCart,
+		isCartOpen, openCart, closeCart,
 	};
 };
 
