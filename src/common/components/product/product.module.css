@@ -46,14 +46,3 @@
 .quantity_selector_wrapper {
 	align-self: flex-end;
 }
-
-@media screen and (max-width: 768px) {
-	.product_content {
-		width: 100%;
-	}
-
-	.quantity_selector_wrapper {
-		align-self: flex-end;
-		justify-self: flex-end;
-	}
-}
