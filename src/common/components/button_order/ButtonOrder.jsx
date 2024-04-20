@@ -12,19 +12,12 @@ const ButtonOrder = ({text, isDisabled, onClick}) => {
 		cursor: isDisabled ? "auto" : "pointer",
 	};
 
-	const onKeyDown = (e) => {
-		if(e.key === "Enter") {
-			onClick();
-		}
-	};
-
 	return (
 		<button 
 			className={styles.button_order}
 			style={disabledStyles}
 			disabled={isDisabled}
 			onClick={onClick}
-			onKeyDown={(e) => onKeyDown(e)}
 		>
 			{text}
 		</button>
