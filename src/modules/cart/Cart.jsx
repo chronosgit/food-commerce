@@ -23,7 +23,7 @@ const Cart = () => {
 	const [isPaymentProcessed, setPaymentProcessed] = useState(false);
 
 	const closedCartStyles = {
-		transform: isCartOpen ? "translateX(0%)" : "translateX(150%)",
+		transform: isCartOpen ? "translateX(0%)" : "translateX(200%)",
 	};
 
 	const onOrderButton = async () => {
@@ -41,7 +41,7 @@ const Cart = () => {
 	return (
 		<div className={styles.window} style={closedCartStyles}>
 			<div className={styles.receipt}>
-				<BackButton onClick={closeCart} />
+				<BackButton onClick={closeCart} isDisabled={isPaymentProcessed} />
 
 				<CartHeading heading="Ваша корзина" />
 

@@ -1,5 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Cart from "@modules/cart/Cart";
+import Container from "@common/components/container/Container";
 import Toaster from "@common/components/toaster/Toaster";
 import { CartContextProvider } from "@common/contexts/CartContext";
 import ToasterContext from "@common/contexts/ToasterContext";
@@ -19,20 +20,22 @@ const App = () => {
   };
 
   return (
-    <CartContextProvider>
-      <ToasterContext.Provider value={toasterCtx}> 
-        <Toaster
-          text={toasterText}
-          color="var(--color-white)"
-          bgColor="var(--color-green)"
-          isActive={isActive}
-        />
+    <Container maxWidth="50rem">
+      <CartContextProvider>
+        <ToasterContext.Provider value={toasterCtx}> 
+          <Toaster
+            text={toasterText}
+            color="var(--color-white)"
+            bgColor="var(--color-green)"
+            isActive={isActive}
+          />
 
-        <RouterProvider router={Router} />
+          <RouterProvider router={Router} />
 
-        <Cart />
-      </ToasterContext.Provider>
-    </CartContextProvider>
+          <Cart />
+        </ToasterContext.Provider>
+     </CartContextProvider>
+    </Container>
   );
 };
 
