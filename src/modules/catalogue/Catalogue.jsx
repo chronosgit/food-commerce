@@ -26,6 +26,8 @@ const Catalogue = () => {
 				<Logo width="3.5rem" />
 			</div>
 
+			<Categories categories={mockCategories} />
+
 			<div className={styles.button_order_wrapper}>
 				<ButtonOrder 
 					text={orderButtonText} 
@@ -33,8 +35,6 @@ const Catalogue = () => {
 					onClick={openCartWindow}
 				/>
 			</div>
-
-			<Categories categories={mockCategories} />
 		</div>	
 	);
 };
