@@ -5,6 +5,7 @@ const useCart = () => {
 	const [cartProducts, setCardProducts] = useState([]);
 	const [totalPrice, setTotalPrice] = useState(0);
 	const [isCartOpen, setCartOpen] = useState(false);
+	const [needFurnace, setNeedFurnace] = useState(false);
 
 	const addToCart = (product) => {
 		setTotalPrice(prev => prev + product.price);
@@ -39,12 +40,20 @@ const useCart = () => {
 
 	const closeCart = () => {
 		setCartOpen(false);
+		setCardProducts([]);
+		setNeedFurnace(false);
+		setTotalPrice(0);
+	};
+
+	const toggleFurnaceOption = () => {
+		setNeedFurnace(p => !p);
 	};
 
 	return {
 		cartProducts, totalPrice,
 		addToCart, removeFromCart,
 		isCartOpen, openCart, closeCart,
+		needFurnace, toggleFurnaceOption
 	};
 };
 

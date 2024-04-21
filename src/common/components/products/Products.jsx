@@ -6,7 +6,7 @@ const Products = ({products: prods}) => {
 	if(!prods || !prods.length) {
     return;
   }
-
+	
 	return (
 		<div className={styles.products}>
 			{

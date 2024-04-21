@@ -1,0 +1,25 @@
+.wrapper {
+	position: relative;
+	width: 3rem;
+	height: 1.6rem;
+	border: none;
+	border-radius: 1rem;
+	background-color: var(--color-gray-dark);
+	cursor: pointer;
+}
+
+.circle {
+	--size: 1.1rem;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: var(--size);
+	height: var(--size);
+	border-radius: 50%;
+	background-color: var(--color-white);
+}
+
+.wrapper,
+.circle {
+	transition: all 0.2s ease;
+}

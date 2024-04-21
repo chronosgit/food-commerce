@@ -1,9 +1,9 @@
 import doExist from "@common/utils/doExist";
 import styles from "./button_order.module.css";
 
-const ButtonOrder = ({text, isDisabled, onClick}) => {
+const ButtonOrder = ({content, isDisabled = false, onClick}) => {
 
-	if(!doExist(text, isDisabled, onClick)) {
+	if(!doExist(content, isDisabled, onClick)) {
 		return;
 	}
 
@@ -19,7 +19,7 @@ const ButtonOrder = ({text, isDisabled, onClick}) => {
 			disabled={isDisabled}
 			onClick={onClick}
 		>
-			{text}
+			{content}
 		</button>
 	);
 };

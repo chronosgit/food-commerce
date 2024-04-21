@@ -1,0 +1,22 @@
+.product {
+
+}
+
+.product_row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.product_heading {
+	margin-block-end: 0.5rem;
+}
+
+.product_name,
+.product_price {
+	font-weight: 500;
+}
+
+.product_type {
+	opacity: 0.6;
+}

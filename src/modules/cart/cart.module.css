@@ -4,7 +4,50 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
+	z-index: 3;
+	
+	background-color: var(--color-gray);
+	transition: all 0.3s ease;
+}
+
+.receipt {
+	padding: 1rem;
+	padding-block-end: 3rem;
+
+	background-color: var(--color-white);
+
+	--a: 90deg; /* the angle of the spikes */
+  --s: 1.5rem;  /* the size of the spikes */
+  
+  mask: conic-gradient(
+		from calc(
+			var(--a)/-2) at bottom,
+		#000 var(--a), #0000 0
+		) 50% / var(--s);
+}
+
+.order_options {
+	margin-block-start: 2rem;
+}
+
+.res {
+	margin-block-start: 1rem;
+	padding: 1rem;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.res_text {
+	font-size: 1.11rem;
+	font-weight: 700;
+}
+
+.button_order_wrapper {
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 1.5rem;
 	z-index: 1000;
-	background-color: red;
-	opacity: 0.5;
 }

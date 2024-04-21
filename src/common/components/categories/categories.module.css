@@ -1,3 +1,29 @@
+.categories {
+	max-height: 70vh;
+	overflow-y: auto;
+	padding-inline: 1.5rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* track */
+::-webkit-scrollbar-track {
+	background-color: var(--color-white);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .categories:first-child {
 	margin-block-start: 5rem;
 }

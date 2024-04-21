@@ -1,0 +1,9 @@
+.back_btn {
+	border: none;
+	background: none;
+}
+
+.arrow {
+	width: 2rem;
+	transform: rotate(180deg);
+}
