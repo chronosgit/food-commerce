@@ -1,3 +1,4 @@
+import CartProduct from "../cart_product/CartProduct";
 import isEmpty from "@common/utils/isEmpty";
 import styles from "./cart_products.module.css";
 
@@ -10,7 +11,7 @@ const CartProducts = ({products: prods}) => {
 	return (
 		<div className={styles.products}>
 			{
-				prods.map(p => <p>{p.name}</p>)
+				prods.map(p => <CartProduct product={p} />)
 			}
 		</div>
 	);
