@@ -18,5 +18,5 @@
 	left: 50%;
 	transform: translateX(-50%);
 	bottom: 1.5rem;
-	z-index: 1000;
+	z-index: 2;
 }

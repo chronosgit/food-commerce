@@ -1,11 +1,10 @@
 
 const handlePayment = () => {
 	return new Promise(res => {
-		console.log("Payment has started.");
-		console.log("Payment is being processed.");
+		// NOTE: payment logic
 
 		setTimeout(() => {
-			console.log("Payment is done!");
+			// NOTE: payment's been done
 			res();
 		}, 3000);
 	});

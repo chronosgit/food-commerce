@@ -40,6 +40,9 @@ const useCart = () => {
 
 	const closeCart = () => {
 		setCartOpen(false);
+		setCardProducts([]);
+		setNeedFurnace(false);
+		setTotalPrice(0);
 	};
 
 	const toggleFurnaceOption = () => {

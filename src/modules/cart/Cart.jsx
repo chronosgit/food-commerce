@@ -6,6 +6,7 @@ import CartProducts from "./components/cart_products/CartProducts";
 import CartOrderOption from "./components/cart_order_option/CartOrderOption";
 import ButtonOrder from "@common/components/button_order/ButtonOrder";
 import CartContext from "@common/contexts/CartContext";
+import ToasterContext from "@common/contexts/ToasterContext";
 import handlePayment from "@common/utils/handlePayment";
 import formatToTengePrice from "@common/utils/formatToTengePrice";
 import styles from "./cart.module.css";
@@ -16,6 +17,8 @@ const Cart = () => {
 		cartProducts, isCartOpen, closeCart, totalPrice,
 		needFurnace, toggleFurnaceOption
 	} = useContext(CartContext);
+
+	const {callToaster} = useContext(ToasterContext);
 
 	const [isPaymentProcessed, setPaymentProcessed] = useState(false);
 
@@ -29,8 +32,11 @@ const Cart = () => {
 		await handlePayment();
 
 		setPaymentProcessed(false);
-		// TODO: call toaster here
-	};
+	
+		callToaster("Оплата успешна!");
+
+		setTimeout(() => closeCart(), 2000);
+	};	
 
 	return (
 		<div className={styles.window} style={closedCartStyles}>
