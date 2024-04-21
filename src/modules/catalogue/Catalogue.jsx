@@ -3,8 +3,8 @@ import Categories from "@common/components/categories/Categories";
 import Logo from "@common/components/logo/Logo";
 import ButtonOrder from "@common/components/button_order/ButtonOrder";
 import CartContext from "@common/contexts/CartContext";
-import makeOrderButtonText from "./utils/makeOrderButtonText";
 import mockCategories from "./api/mockCategories";
+import makeOrderButtonText from "./utils/makeOrderButtonText";
 import styles from "./catalogue.module.css";
 
 const Catalogue = () => {
