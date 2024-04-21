@@ -5,6 +5,9 @@ const useCart = () => {
 	const [cartProducts, setCardProducts] = useState([]);
 	const [totalPrice, setTotalPrice] = useState(0);
 	const [isCartOpen, setCartOpen] = useState(false);
+	const [orderOptions, setOrderOptions] = useState({
+		furnace: false,
+	});
 
 	const addToCart = (product) => {
 		setTotalPrice(prev => prev + product.price);
@@ -41,10 +44,18 @@ const useCart = () => {
 		setCartOpen(false);
 	};
 
+	const toggleFurnaceOption = () => {
+		setOrderOptions(p => ({
+			...p,
+			furnace: !p.furnace,
+		}));
+	};
+
 	return {
 		cartProducts, totalPrice,
 		addToCart, removeFromCart,
 		isCartOpen, openCart, closeCart,
+		orderOptions, toggleFurnaceOption
 	};
 };
 
