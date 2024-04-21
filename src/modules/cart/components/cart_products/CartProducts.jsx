@@ -11,7 +11,7 @@ const CartProducts = ({products: prods}) => {
 	return (
 		<div className={styles.products}>
 			{
-				prods.map(p => <CartProduct product={p} />)
+				prods.map(p => <CartProduct key={p.id} product={p} />)
 			}
 		</div>
 	);
