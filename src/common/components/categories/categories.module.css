@@ -1,3 +1,9 @@
+.categories {
+	max-height: 70vh;
+	overflow-y: auto;
+	padding-inline: 1.5rem;
+}
+
 .categories:first-child {
 	margin-block-start: 5rem;
 }

@@ -11,7 +11,7 @@ const Toggler = ({isOn, onToggle}) => {
 	};
 
 	return (
-		<div 
+		<button 
 			className={styles.wrapper}
 			style={dynamicWrapperStyles} 
 			onClick={onToggle}
@@ -20,7 +20,7 @@ const Toggler = ({isOn, onToggle}) => {
 				className={styles.circle} 
 				style={circleStyles}
 			/>
-		</div>
+		</button>
 	);
 };
 
