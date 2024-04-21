@@ -30,7 +30,7 @@ const Catalogue = () => {
 
 			<div className={styles.button_order_wrapper}>
 				<ButtonOrder 
-					text={orderButtonText} 
+					content={orderButtonText} 
 					isDisabled={!canOrder} 
 					onClick={openCartWindow}
 				/>

@@ -43,3 +43,11 @@
 	font-size: 1.11rem;
 	font-weight: 700;
 }
+
+.button_order_wrapper {
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 1.5rem;
+	z-index: 1000;
+}
